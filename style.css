@@ -2,30 +2,143 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
     text-decoration: none;
+    list-style-type: none;
 }
 
 .container{
     width: 1440px;
     margin: 0 auto;
 }
-
 .header-flex{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-list{
+    margin-top: 100px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: lightgray;
+    width: fit-content;
+    padding: 20px 40px;
+}
+img{
+    width: 400px;
+    height: 250px;
+}
+.header-right{
+    margin-left: 80px;
+    padding: 10px;
+    background-color: darkcyan;
+    
+}
+.header-list{
+    padding-left: 10px;
+    opacity: 0.7;
+}
+.header-item{
+    margin: 5px;
+text-align: center;
+}
+.header-item:hover{
+    text-decoration: underline;
+    color: black;
 }
 
-.header{
-    background-color: aqua;
-    position: fixed;
-    top: 20px;
+.text-content{
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.textcontent{
+    position: relative;
+    left: 650px;
+    top: -55px;
+    background-color: lightskyblue;
     opacity: 0.7;
+    width: fit-content;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 14px;
+    color: darkslategrey;
+    width: 250px;
+    
+}
+
+.header-text{
+    color: whitesmoke;
+    padding-bottom: 6px;
+}
+h2{
+    padding-bottom: 20px;
+    width: 150px;
+    text-align: center;
+}
+
+.active-text{
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.feedback-btn{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: darkslategray;
+    color: whitesmoke;
+    font-size: 15px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: fixed;
+    top: 30px;
+  
+}
+
+.form-img{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    top: -220px;
+    left: 155px;
+}
+
+
+
+.form-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkcyan;
+    width: 400px;
+    padding-top: 30px;
+    position: fixed;
+    top: 250px;
+    left: 570px;
+   
+}
+.form-title{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input{
+    border: none;
+    background-color: rgb(63, 216, 236);
+    color: black;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 270px;
+}
+
+.btn-submit{
+    padding: 10px;
+    width: 180px;
+    background-color: darkslategray;
+    color: whitesmoke;
+    font-size: 15px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.close{
+    display: none;
 }
