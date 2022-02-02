@@ -145,15 +145,15 @@ window.navigator.geolocation.getCurrentPosition( async mintaqa =>{
         }
         else{
 
-            const fajr = namoz.data[i].timings.Fajr;
-            const asr = namoz.data[i].timings.Asr;
-            const Dhuhr = namoz.data[i].timings.Dhuhr;
-            const Imsak = namoz.data[i].timings.Imsak;
-            const Isha = namoz.data[i].timings.Isha;
-            const Maghrib = namoz.data[i].timings.Maghrib;
-            const Midnight = namoz.data[i].timings.Midnight;
-            const Sunrise = namoz.data[i].timings.Sunrise;
-            const Sunset = namoz.data[i].timings.Sunset;
+     const fajr = namoz.data[i].timings.Fajr;
+     const asr = namoz.data[i].timings.Asr;
+     const Dhuhr = namoz.data[i].timings.Dhuhr;
+     const Imsak = namoz.data[i].timings.Imsak;
+     const Isha = namoz.data[i].timings.Isha;
+     const Maghrib = namoz.data[i].timings.Maghrib;
+     const Midnight = namoz.data[i].timings.Midnight;
+     const Sunrise = namoz.data[i].timings.Sunrise;
+     const Sunset = namoz.data[i].timings.Sunset;
     
     
             
