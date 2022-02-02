@@ -215,5 +215,38 @@ body{
     background-color: lightgoldenrodyellow;
 }
 
-
+#submit{
+    width: 100px;
+    height: 37px;
+    border: none;
+    background-color: darkslategrey;
+    color: whitesmoke;
+}
+.prey-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.p-list{
+    text-align: center;  
+    background-color: lightcyan;
+    padding: 20px;  
+}
+.p-title{
+    width: 300px;
+    text-align: center;
+    padding-left: 70px;
+}
+.p-item{
+    margin-bottom: 10px;
+}
+.p-text{
+    font-family: serif;
+    color: black;
+    font-weight: bold;
+}
+.p-text:hover{
+    background-color: darkslategrey;
+    
+}
 
