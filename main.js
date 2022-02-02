@@ -123,15 +123,8 @@ window.navigator.geolocation.getCurrentPosition( async mintaqa =>{
 
     console.log(latitude, lontitude);
 
-    const response = await fetch(`http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${lontitude}&method=3&month=${new Date().getMonth()}&year=${new Date().getFullYear()}`);
+    const response = await fetch(`http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${lontitude}&method=3school=1&month=${ new Date().getMonth}&year=${new Date().getFullYear}`);
     const namoz = await response.json();
-
-    console.log(namoz.data);
-    for(let key of namoz.data){
-        for(let key in namoz.data.timings){
-            console.log(key);
-        }
-    }
    
     const SubMit = document.querySelector("#submit");
     SubMit.addEventListener("click", () =>{
@@ -154,9 +147,7 @@ window.navigator.geolocation.getCurrentPosition( async mintaqa =>{
      const Midnight = namoz.data[i].timings.Midnight;
      const Sunrise = namoz.data[i].timings.Sunrise;
      const Sunset = namoz.data[i].timings.Sunset;
-    
-    
-            
+          
         const elements = document.querySelectorAll(".p-text");
         elements[0].textContent = "Imsak :" + Imsak;
         elements[1].textContent = " Fajr :" + fajr;
@@ -168,14 +159,6 @@ window.navigator.geolocation.getCurrentPosition( async mintaqa =>{
         elements[7].textContent = "Isha : " + Isha;
         elements[8].textContent = "Midnight :" + Midnight;
         elements[9].textContent = (new Date().getMonth() + 1) + "- oyning " + i +"- kuni";  
-
-        }
-         
-        
-    
+        } 
     });
-   
-
-
-
 })
