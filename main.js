@@ -65,3 +65,51 @@ feedback.addEventListener("click", () =>{
     form.classList.remove("close");
     form.classList.add("open");
 });
+
+ const deadline = "2022-02-10";
+function getTime(endtime){
+    const time = Date.parse(endtime) - Date.parse(new Date()),
+     days = Math.floor( time / ( 1000 *60*60*24)),
+     hours = Math.floor((time / ( 1000 * 60 *60 )) % 24),
+     minutes = Math.floor((time / (1000 * 60)) % 60 ),
+     seconds = Math.floor( (time/1000) % 60);
+     return {
+         time : time,
+         days : days,
+         hours : hours,
+         minutes : minutes,
+         seconds : seconds,
+     };
+    }
+function getZero(num){
+    if(num>= 0 && num < 10){
+        return "0" + num;
+    }
+    else{
+        return num;
+    }
+}
+function SetClock(selector, endtime){
+    const timer = document.querySelector(selector);
+    const days = document.querySelector("#days");
+    const hours = document.querySelector("#hours");
+    const minutes = document.querySelector("#minutes");
+    const seconds = document.querySelector("#seconds");
+    const SetTimer = setInterval(UpdateClock, 1000);
+    UpdateClock();
+
+    function UpdateClock() {
+        const time = getTime(endtime);
+        days.textContent = getZero(time.days);
+        hours.textContent = getZero(time.hours);
+        minutes.textContent = getZero(time.minutes);
+        seconds.textContent = getZero(time.seconds);
+        if(time.time <= 0){
+            clearInterval(SetTimer);
+        }
+    }
+
+}
+SetClock(".timer", deadline);
+
+     
