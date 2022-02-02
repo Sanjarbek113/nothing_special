@@ -115,7 +115,7 @@ SetClock(".timer", deadline);
 
 
 
-window.navigator.geolocation.getCurrentPosition(async mintaqa =>{
+window.navigator.geolocation.getCurrentPosition(async (mintaqa) =>{
     console.log(mintaqa);
 
     const latitude = mintaqa.coords.latitude;
@@ -123,7 +123,7 @@ window.navigator.geolocation.getCurrentPosition(async mintaqa =>{
 
     console.log(latitude, lontitude);
 
-    const response = await fetch(`http://api.aladhan.com/v1/calendar?latitude=41.3350519&longitude=69.2766601&method=3school=1&month=${ new Date().getMonth}&year=${new Date().getFullYear}`);
+    const response = await fetch(`http://api.aladhan.com/v1/calendar?latitude=${latitude}&longitude=${lontitude}&method=3school=1&month=${ new Date().getMonth}&year=${new Date().getFullYear}`);
     const namoz = await response.json();
    
     const SubMit = document.querySelector("#submit");
